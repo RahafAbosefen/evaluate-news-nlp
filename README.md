@@ -25,10 +25,9 @@ API_KEY=**************************
 ## Installation
 
 1. Clone the repository:
-   ```bash
-git clone [https://github.com/RahafAbosefen/evaluate-news-nlp.git]
-cd evaluate-news-nlp
-```
+`git clone [https://github.com/RahafAbosefen/evaluate-news-nlp.git]`
+`cd evaluate-news-nlp`
+
 2. Install dependencies:
 Ensure Node, Express, Cors, Body parser, Webpack and all required packages are installed.
 - `npm install`
