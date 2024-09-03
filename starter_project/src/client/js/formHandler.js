@@ -3,8 +3,6 @@ import { checkForURL } from './urlChecker.js';
 
 const serverURL = 'http://localhost:8000/api';
 
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();

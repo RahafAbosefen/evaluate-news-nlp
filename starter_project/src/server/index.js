@@ -2,6 +2,7 @@ var path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
+const mockAPIResponse = require('./mockAPI.js')
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -27,6 +28,10 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html');
 });
 
+//GET test Rout
+app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
+});
 
 // POST Route
 app.post('/api/analyse', async (req, res) => {
@@ -41,7 +46,7 @@ app.post('/api/analyse', async (req, res) => {
         if (!apiResponse.ok) {
             throw new Error(`HTTP error! status: ${apiResponse.status}`);
         }
-        
+
         const result = await apiResponse.json();
         console.log(result);
         res.send(result);
